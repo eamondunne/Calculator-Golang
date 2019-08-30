@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"log"
 	"github.com/gorilla/mux"
-	"github.com/eamondunne/calculator/pkg/add"
-	"github.com/eamondunne/calculator/pkg/subtract"
-	"github.com/eamondunne/calculator/pkg/multiply"
-	"github.com/eamondunne/calculator/pkg/divide"
+	"github.com/eamondunne/Calculator-Golang/pkg/add"
+	"github.com/eamondunne/Calculator-Golang/pkg/subtract"
+	"github.com/eamondunne/Calculator-Golang/pkg/multiply"
+	"github.com/eamondunne/Calculator-Golang/pkg/divide"
 )
 
 func HomeHandler(w http.ResponseWriter, r *http.Request){

@@ -6,13 +6,12 @@ import (
 	"net/http"
 	"strconv"
 	"encoding/json"
-	"github.com/eamondunne/calculator/pkg/subtract"
-	"github.com/eamondunne/calculator/pkg/add"
+	"github.com/eamondunne/Calculator-Golang/pkg/subtract"
+	"github.com/eamondunne/Calculator-Golang/pkg/add"
 )
 
 func IntDivide(a, b int64) (result int64, err error) {
 	var sign int64 = 1
-	// var temp, quotient int64 = 0, 0
 	var quotient int64 = 0
 	var neg_flag bool = false
 	var additive_inverse int64
@@ -29,6 +28,7 @@ func IntDivide(a, b int64) (result int64, err error) {
 		a = subtract.IntSubtract(a, additive_inverse)
 		a = subtract.IntSubtract(a, additive_inverse)
 	}
+	
 	// if b is negative, abs(b) + set flag
 	if (b < 0){
 		neg_flag = !neg_flag
@@ -47,6 +47,8 @@ func IntDivide(a, b int64) (result int64, err error) {
 			break
 		}
 	}
+
+	// If flag is set, set quotient to negative
 	if(neg_flag){
 		additive_inverse = quotient
 		// quotient = -quotient
@@ -72,6 +74,7 @@ func DivideHandler(w http.ResponseWriter, r *http.Request){
 		// TODO: Handle Error
 	}
 	result, err := IntDivide(num1, num2)
+	// Return Infinity if divide by 0 attempted
 	if(err != nil){
 		fmt.Println("cannot divide by 0")
 		json.NewEncoder(w).Encode("Infinity")
