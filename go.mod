@@ -1,4 +1,4 @@
-module github.com/eamondunne/GoLang-VueJS-Fullstack-Calculator
+module github.com/eamondunne/Calculator-Golang
 
 go 1.12
 

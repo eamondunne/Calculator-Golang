@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 	"encoding/json"
-	"github.com/eamondunne/calculator/pkg/add"
-	"github.com/eamondunne/calculator/pkg/subtract"
+	"github.com/eamondunne/Calculator-Golang/pkg/add"
+	"github.com/eamondunne/Calculator-Golang/pkg/subtract"
 )
 
 // Function to multiply two numbers without using arithmetic operators
