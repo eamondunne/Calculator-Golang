@@ -1,6 +1,6 @@
 # Golang Calculator API
 
-## Run with Docker
+## Build & Run with Docker
 ```
 docker build -t calculator-golang .
 ```
